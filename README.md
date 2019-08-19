@@ -2,6 +2,7 @@
 一个完美适配Android每个版本的网络监听框架。
 使用EventBus原理实现，网络发生变化时通过注解方法实时返回
 
+
 使用方式如下：
 class MainActivity : AppCompatActivity() {
 
