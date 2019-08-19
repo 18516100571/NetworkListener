@@ -50,9 +50,12 @@ public class NetworkManager {
         this.application = application;
         //动态注册广播
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            NetworkCallback networkCallback = new NetworkCallback();
+//            NetworkCallback networkCallback = new NetworkCallback();
             NetworkRequest.Builder builder = new NetworkRequest.Builder();
             NetworkRequest request = builder.build();
+            if (networkCallback == null) {
+                throw new NullPointerException("networkCallback == null");
+            }
             ConnectivityManager connMgr =
                     (ConnectivityManager) getApplication().getSystemService(Context.CONNECTIVITY_SERVICE);
             if (connMgr != null) {

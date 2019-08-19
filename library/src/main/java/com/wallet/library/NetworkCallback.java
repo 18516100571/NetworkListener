@@ -140,7 +140,7 @@ public class NetworkCallback extends ConnectivityManager.NetworkCallback {
         Method[] methods = clazz.getDeclaredMethods();
 //订阅方法的收集
         for (Method method : methods) {
-            com.wallet.library.annotation.Network network = method.getAnnotation(com.wallet.library.annotation.Network.class);
+         com.wallet.library.annotation.Network network = method.getAnnotation(com.wallet.library.annotation.Network.class);
             if (network == null) {
                 continue;
             }
